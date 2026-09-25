@@ -2,7 +2,7 @@ import time
 import hashlib
 import random
 
-ACTIVE_SESSIONS = {}
+ACTIVE_SESSIONS = {}                    
 
 def create_session_token(user_id: int) -> str:
     seed = f"{user_id}:{random.randint(10000, 99999)}".encode("utf-8")

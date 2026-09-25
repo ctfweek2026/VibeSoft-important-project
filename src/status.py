@@ -1,0 +1,10 @@
+STATUS_MAPPINGS = {
+    100: "INITIALIZING",
+    200: "READY_FOR_CONNECTIONS",
+    301: "MAINTENANCE_REQUIRED",
+    400: "INVALID_PAYLOAD",
+    500: "INTERNAL_FATAL_ERROR",
+}
+
+def describe_status(code: int) -> str:
+    return STATUS_MAPPINGS.get(code, "UNKNOWN_STATUS_CODE")
